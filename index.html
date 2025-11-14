@@ -126,9 +126,31 @@
             color: #fff;
         }
 
+        /* Fix reservations button visibility when navbar scrolls */
+        .nav-scrolled .btn-primary {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+        }
+
+        .nav-scrolled .btn-primary:hover {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
         .section-divider {
             height: 1px;
             background: linear-gradient(to right, transparent, #6B7280, transparent);
+        }
+
+        .farm-badge {
+            display: inline-block;
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -189,11 +211,17 @@
         </div>
 
         <div class="relative z-10 text-center text-white px-6">
-            <h1 class="text-5xl md:text-7xl font-heading font-light tracking-tight mb-6 animate-on-scroll">
+            <div class="farm-badge mb-6 animate-on-scroll">
+                De la Finca a la Mesa • Farm to Table
+            </div>
+            <h1 class="text-5xl md:text-7xl font-heading font-light tracking-tight mb-6 animate-on-scroll" style="animation-delay: 0.1s;">
                 Ingredientes. Comunidad. Cocina.
             </h1>
-            <p class="text-lg md:text-xl font-body mb-8 max-w-2xl mx-auto animate-on-scroll" style="animation-delay: 0.2s;">
-                Contemporary dining celebrating Puerto Rico's finest local ingredients
+            <p class="text-lg md:text-xl font-body mb-4 max-w-2xl mx-auto animate-on-scroll" style="animation-delay: 0.2s;">
+                Farm-to-table contemporary dining celebrating Puerto Rico's finest local ingredients
+            </p>
+            <p class="text-base md:text-lg font-body mb-8 max-w-2xl mx-auto opacity-90 animate-on-scroll" style="animation-delay: 0.3s;">
+                Fresh from local farms daily • Menu changes every 2-3 days
             </p>
             <a href="http://www.prolepr.com/" target="_blank" class="btn-primary px-8 py-3 text-sm uppercase tracking-wider inline-block animate-on-scroll" style="animation-delay: 0.4s;">
                 Make a Reservation
@@ -256,11 +284,17 @@
     <section id="menu" class="py-24 md:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 animate-on-scroll">
+                <div class="farm-badge mb-6" style="background-color: transparent; color: #1a1a1a; border: 2px solid #1a1a1a;">
+                    100% Farm-to-Table Commitment
+                </div>
                 <h2 class="text-4xl md:text-5xl font-heading font-light tracking-tight mb-4">
-                    A Menu That Evolves
+                    A Menu That Evolves Daily
                 </h2>
-                <p class="text-lg text-textSecondary max-w-2xl mx-auto">
-                    Internationally inspired dishes rooted in Puerto Rican ingredients. Our menu changes frequently to showcase the season's best.
+                <p class="text-lg text-textSecondary max-w-2xl mx-auto mb-3">
+                    Internationally inspired dishes rooted in Puerto Rican farm-fresh ingredients. Our menu changes every 2-3 days to showcase the season's best from local farms.
+                </p>
+                <p class="text-base text-textSecondary max-w-2xl mx-auto font-semibold">
+                    What you eat today supports Puerto Rico's farmers tomorrow.
                 </p>
             </div>
 
@@ -432,8 +466,11 @@
                 <!-- Column 1: About -->
                 <div>
                     <img src="./assets/image_2.png" alt="PROLE Cocina & Barra" class="h-12 mb-6">
-                    <p class="opacity-90 leading-relaxed">
-                        Contemporary restaurant and bar celebrating Puerto Rico's finest local ingredients and agricultural heritage.
+                    <p class="opacity-90 leading-relaxed mb-3">
+                        Farm-to-table contemporary restaurant and bar celebrating Puerto Rico's finest local ingredients and agricultural heritage.
+                    </p>
+                    <p class="text-sm opacity-75 italic">
+                        De la Finca a la Mesa • Est. 2019
                     </p>
                 </div>
 
