@@ -152,6 +152,40 @@
             text-transform: uppercase;
             font-weight: 600;
         }
+
+        /* Menu tabs styling */
+        .menu-tab {
+            cursor: pointer;
+            padding: 12px 24px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .menu-tab:hover {
+            border-bottom-color: #6B7280;
+        }
+
+        .menu-tab.active {
+            border-bottom-color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .menu-content {
+            display: none;
+        }
+
+        .menu-content.active {
+            display: block;
+        }
+
+        .menu-item {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px 0;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
     </style>
 </head>
 <body>
@@ -323,9 +357,964 @@
             </div>
 
             <div class="text-center mt-12 animate-on-scroll">
-                <a href="http://www.prolepr.com/" target="_blank" class="btn-dark px-8 py-3 text-sm uppercase tracking-wider inline-block">
-                    View Current Menu
-                </a>
+                <p class="text-textSecondary mb-4">Browse our full menu below</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Menu Section -->
+    <section class="py-24 md:py-32 bg-background">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Menu Tabs -->
+            <div class="flex justify-center border-b border-gray-300 mb-12 flex-wrap">
+                <button class="menu-tab active text-sm uppercase tracking-wider" onclick="showMenuTab('food')">Food</button>
+                <button class="menu-tab text-sm uppercase tracking-wider" onclick="showMenuTab('cocktails')">Cocktails</button>
+                <button class="menu-tab text-sm uppercase tracking-wider" onclick="showMenuTab('wine')">Wine</button>
+                <button class="menu-tab text-sm uppercase tracking-wider" onclick="showMenuTab('spirits')">Spirits & Beer</button>
+            </div>
+
+            <!-- Food Menu -->
+            <div id="food-menu" class="menu-content active">
+                <!-- Appetizers -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-heading font-light mb-6 text-center">Appetizers</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Heirloom Tomato Salad</h4>
+                                <span class="text-textSecondary ml-4">$17</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Mozzarella di Bufala, Basil Granita, Roasted Tomato Vinaigrette</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Ricotta Toast</h4>
+                                <span class="text-textSecondary ml-4">$15</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Roasted Butternut Squash, Spiced Almonds, Sage Oil, Grilled BOBET's Sour Dough</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Buñuelos de Cangrejo</h4>
+                                <span class="text-textSecondary ml-4">$16</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Basil Aioli</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Beef Shank Fricasé Empanadas</h4>
+                                <span class="text-textSecondary ml-4">$18</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Ajilimójili</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Beef Tartar</h4>
+                                <span class="text-textSecondary ml-4">$20</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Thyme and Rosemary Crispy Rice Cakes</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Hummus</h4>
+                                <span class="text-textSecondary ml-4">$15</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Gandules en Escabeche, Grilled BOBET's Crostini</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Coconut Shrimp Ceviche</h4>
+                                <span class="text-textSecondary ml-4">$20</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Red Onions, Cucumber, Cilantro, Jalapeño and Chili Oil</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dinner -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-heading font-light mb-6 text-center">Dinner</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Korean Fried Chicken</h4>
+                                <span class="text-textSecondary ml-4">$29</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Chili Garlic Glaze, Sweet Potato Purée, Sesame Seeds, Crispy Brussels Sprouts</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Leek Risotto</h4>
+                                <span class="text-textSecondary ml-4">$29</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Brown Butter Shrimp, Parmigiano-Reggiano</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Gnocchis de Malanga</h4>
+                                <span class="text-textSecondary ml-4">$25</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Pesto Cream Sauce, Almond Ricotta</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Bourbon Braised Short Rib</h4>
+                                <span class="text-textSecondary ml-4">$29</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Brown Butter Parsnip Purée, Crispy Shallots</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Salmon</h4>
+                                <span class="text-textSecondary ml-4">$31</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Garlic Cream, Cilantro, Plantain Chips</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">PROLE Burger</h4>
+                                <span class="text-textSecondary ml-4">$30</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Wagyu and Bone Marrow Blend, Basil Aioli, Bourbon Bacon Jam, Vermont Cheddar, Brioche Bun, House Fries</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Lasagna</h4>
+                                <span class="text-textSecondary ml-4">$26</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Mushroom Ragú, Zucchini and Yellow Squash, Mozzarella di Bufala</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Filete de Cerdo Relleno de Longaniza</h4>
+                                <span class="text-textSecondary ml-4">$28</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Purée de Maduros, Roasted Red Pepper Chimichurri</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">New York Steak Frites</h4>
+                                <span class="text-textSecondary ml-4">$45</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Red Pepper Chimichurri</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div>
+                    <h3 class="text-3xl font-heading font-light mb-6 text-center">Dessert</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Barriguitas de Vieja</h4>
+                                <span class="text-textSecondary ml-4">$14</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Rum Caramel, House Vanilla Ice Cream Scoop</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Butter Cake</h4>
+                                <span class="text-textSecondary ml-4">$14</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">House Ice Cream Scoop</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Triple Chocolate Cookie a La Mode</h4>
+                                <span class="text-textSecondary ml-4">$13</span>
+                            </div>
+                            <p class="text-sm text-textSecondary">Caramel Popcorn, House Ice Cream Scoop</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="mb-2">
+                                <h4 class="font-semibold">House Ice Cream Flavors</h4>
+                            </div>
+                            <p class="text-sm text-textSecondary">Vanilla • Salted Honey • Vanilla Chocolate Cake Crumble • Hazelnuts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cocktails Menu -->
+            <div id="cocktails-menu" class="menu-content">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Gin Cocktails -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Gin</h3>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Lobo Domesticado</h4>
+                                <span class="text-textSecondary ml-2">$16</span>
+                            </div>
+                            <p class="text-xs text-textSecondary mb-1">Tanqueray Gin, St. Germain: Elderflower Liqueur, Honey, Lemon, Cucumber, Pink Peppercorns</p>
+                            <p class="text-xs text-textSecondary italic">+ Topped with Sparkling Wine $18</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Chef's Negroni</h4>
+                                <span class="text-textSecondary ml-2">$18</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Strawberry Infused Tanqueray Gin, Campari, Dolin Red Vermouth, Chocolate Bitters</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Madam</h4>
+                                <span class="text-textSecondary ml-2">$17</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Tanqueray Gin, Sous-Vide Lavender Tea, Rosemary and Ginger Infusion, Lime, Egg Whites</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Camellia</h4>
+                                <span class="text-textSecondary ml-2">$17</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Strawberry Infused Tanqueray Gin, Cointreau Orange Liqueur, Dolin Génépy le Chamois Liqueur, Clarified Lemon, Maraschino Cherry</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">House Gin & Tonic</h4>
+                                <span class="text-textSecondary ml-2">$16</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Tanqueray Gin, Crème de Violette, Tonic Water</p>
+                        </div>
+                    </div>
+
+                    <!-- Whiskey Cocktails -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Whiskey</h3>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Himalayan Mule</h4>
+                                <span class="text-textSecondary ml-2">$16</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Bulleit Bourbon, Freshly Orange, Lime, Cinnamon, Topped with Ginger Beer</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Cinnamon Old Fashioned</h4>
+                                <span class="text-textSecondary ml-2">$17</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Bulleit Bourbon, Cinnamon Syrup, Cointreau Orange Liquor, Orange Bitters, Angostura Bitters, Orange Peel, Maraschino Cherry</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Lavender Old Fashioned</h4>
+                                <span class="text-textSecondary ml-2">$18</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Bulleit Bourbon, Smoked with Hickorywood, Cocoa Bitters, Angostura-Bitters, Orange Peel</p>
+                        </div>
+                    </div>
+
+                    <!-- Tequila & Mezcal -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Tequila & Mezcal</h3>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Armonía en el Desierto</h4>
+                                <span class="text-textSecondary ml-2">$17</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Mezcal Lopez Real, Jalapeño Syrup, Honey, Lemon</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">El Antídoto</h4>
+                                <span class="text-textSecondary ml-2">$17</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Libélula Tequila Blanco, Passion Fruit, Lemon, Basil</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">El Segundo</h4>
+                                <span class="text-textSecondary ml-2">$17</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Mezcal Lopez Real, Pink Grapefruit, Jalapeño Syrup, Smoked Thyme</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Berry Valentine</h4>
+                                <span class="text-textSecondary ml-2">$17</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Mezcal Lopez Real, Berry Shrub, Lemon, Ginger, Mint</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Un Mejicano en Perú</h4>
+                                <span class="text-textSecondary ml-2">$18</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Libelula Tequila Blanco, Pineapple Juice, Honey, Jalapeño Syrup, Egg Whites, Lemon</p>
+                        </div>
+                    </div>
+
+                    <!-- Vodka -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Vodka</h3>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Positano Spritz</h4>
+                                <span class="text-textSecondary ml-2">$17</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Bravada House Cured Cucumber Vodka, Basil, Lemon, Cucumber Bitters, Topped with House Sparkling Wine</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Little Red Riding Hood</h4>
+                                <span class="text-textSecondary ml-2">$17</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Combier Litchi Liqueur, House Strawberry Bravada Limoncello, Topped with Sparkling Water</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Strawberry Limoncello Mule</h4>
+                                <span class="text-textSecondary ml-2">$16</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Bravada Strawberry House Cured Limoncello, Lemon Peel</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">House Espresso Martini</h4>
+                                <span class="text-textSecondary ml-2">$18</span>
+                            </div>
+                            <p class="text-xs text-textSecondary mb-1">Borghetti Italian Espresso Liquor, Bravada Vodka, Freshly Brewed Nespresso, Espresso Beans</p>
+                            <p class="text-xs text-textSecondary italic">+ Bailey's Irish Cream $20</p>
+                        </div>
+                    </div>
+
+                    <!-- Rum -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Rum</h3>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">La Perfección</h4>
+                                <span class="text-textSecondary ml-2">$16</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Ron del Barrilito **, Fresh Espresso, House Coquito Cream</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">House Old Cuban</h4>
+                                <span class="text-textSecondary ml-2">$15</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Ron del Barrilito **, Lemon, Mint, Topped with House Sparkling Wine</p>
+                        </div>
+                    </div>
+
+                    <!-- Mocktails -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Mocktails</h3>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Lady in Pink</h4>
+                                <span class="text-textSecondary ml-2">$16</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Berry Shrub, Lime Juice, Honey, Greek Yogurt</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Orange Skies</h4>
+                                <span class="text-textSecondary ml-2">$14</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Lemon, Orange, Ginger, Sparkling Water</p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold">Coconut Mojito</h4>
+                                <span class="text-textSecondary ml-2">$14</span>
+                            </div>
+                            <p class="text-xs text-textSecondary">Coconut Water, Coconut Cream, Mint, Lime, Honey, Sparkling Water</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wine Menu -->
+            <div id="wine-menu" class="menu-content">
+                <!-- By the Glass -->
+                <div class="mb-12">
+                    <h3 class="text-3xl font-heading font-light mb-6 text-center pb-4 border-b border-gray-300">By the Glass</h3>
+
+                    <div class="mb-8">
+                        <h4 class="text-xl font-heading font-light mb-4">Sparkling</h4>
+                        <div class="menu-item">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h5 class="font-semibold">Gustave Lorentz, Zéro Dosage, Crémant 2019</h5>
+                                    <p class="text-sm text-textSecondary">A.O.C. Alsace, France • Pinot Blanc, Chardonnay, Riesling</p>
+                                </div>
+                                <span class="text-textSecondary ml-4">$18</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-heading font-light mb-4">White</h4>
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h5 class="font-semibold">Granbazán, Etiqueta Verde 2023</h5>
+                                        <p class="text-sm text-textSecondary">Rías Baixas, Spain • Albariño</p>
+                                    </div>
+                                    <span class="text-textSecondary ml-4">$15</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-heading font-light mb-4">Red</h4>
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h5 class="font-semibold">Viña Mayor, Tinto Roble 2023</h5>
+                                        <p class="text-sm text-textSecondary">D.O.C., Ribera del Duero, Spain • Tempranillo</p>
+                                    </div>
+                                    <span class="text-textSecondary ml-4">$15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottle Service -->
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Sparkling & White Wines -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-6 pb-2 border-b border-gray-300">Sparkling Wines</h3>
+
+                        <div class="space-y-4">
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">La Marca Prosecco</h5>
+                                    <span class="text-textSecondary text-sm">$40</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">D.O.C., Prosecco, Italy • Glera</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Veuve Clicquot</h5>
+                                    <span class="text-textSecondary text-sm">$125</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Champagne, France • Pinot Noir, Chardonnay, Pinot Munier</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Gustave Lorentz, Zéro Dosage, Crémant 2019</h5>
+                                    <span class="text-textSecondary text-sm">$50</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">A.O.C. Alsace, France • Pinot Blanc, Chardonnay, Riesling</p>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-heading font-light mb-6 mt-8 pb-2 border-b border-gray-300">White Wines</h3>
+
+                        <div class="space-y-4">
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Albert Bichot Mâcon-Villages 2020</h5>
+                                    <span class="text-textSecondary text-sm">$40</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Burgundy, France • Chardonnay</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Kohl 2022</h5>
+                                    <span class="text-textSecondary text-sm">$40</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Austria, Weinland • Grüner Veltliner</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Terlato 2023</h5>
+                                    <span class="text-textSecondary text-sm">$65</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">D.O.C., Colli Orientali del Friuli, Italy • Pinot Grigio</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Contacto, Anselmo Mendes, Muros de Melgaço</h5>
+                                    <span class="text-textSecondary text-sm">$65</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Vinho Verde, Portugal • Alvarinho</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Granbazán, Etiqueta Verde 2023</h5>
+                                    <span class="text-textSecondary text-sm">$40</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Rías Baixas, Spain • Albariño</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">DAOU 2023</h5>
+                                    <span class="text-textSecondary text-sm">$60</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Paso Robles, California • Chardonnay</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Dutton Ranch, Dutton Goldfield 2019</h5>
+                                    <span class="text-textSecondary text-sm">$120</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Russian River Valley, Sonoma County, California • Chardonnay</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">The Vice, "House Batch" #141 2023</h5>
+                                    <span class="text-textSecondary text-sm">$65</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Napa Valley, California • Sauvignon Blanc</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Red Wines -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-6 pb-2 border-b border-gray-300">Red Wines</h3>
+
+                        <div class="space-y-4">
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Mosquita Muerta, Cordero con Piel de Lobo 2024</h5>
+                                    <span class="text-textSecondary text-sm">$40</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Uco Valley, Mendoza, Argentina • Malbec</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Château Larose Perganson Haut-Médoc 2015</h5>
+                                    <span class="text-textSecondary text-sm">$95</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Bordeaux, France • Cabernet Sauvignon, Merlot, Petit Verdot</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Domaine Paul Buisse, Chinon 2023</h5>
+                                    <span class="text-textSecondary text-sm">$50</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Touraine, Loire, France • Cabernet Franc</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Château de la Gardine, Rasteau 2021</h5>
+                                    <span class="text-textSecondary text-sm">$65</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Rhône Valley, France • Grenache, Syrah, Cinsault</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Château La Rose de By 2014 Médoc</h5>
+                                    <span class="text-textSecondary text-sm">$60</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Bordeaux, France • Cabernet Sauvignon, Cabernet Franc, Merlot</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Domaine Gille, Côte de Nuits-Villages, La Julbigne 2021</h5>
+                                    <span class="text-textSecondary text-sm">$90</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Burgandy, France • Pinot Noir</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Mauro Molino 2023</h5>
+                                    <span class="text-textSecondary text-sm">$50</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Langhe, Piedmont, Italy • Nebbiolo</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Ruffino, Modus Toscana 2018</h5>
+                                    <span class="text-textSecondary text-sm">$75</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Tuscany, Italy • Merlot, Sangiovese, Cabernet Sauvignon</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Montepeloso, Eneo Toscana 2022</h5>
+                                    <span class="text-textSecondary text-sm">$90</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Tuscany, Italy • Sangiovese</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Poggio al Tesoro 'Il Seggio' Bolgheri 2022</h5>
+                                    <span class="text-textSecondary text-sm">$70</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Tuscany, Italy • Super Tuscan</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Querciabella Chianti Classico 2018</h5>
+                                    <span class="text-textSecondary text-sm">$75</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">D.O.C.G., Chianti, Italy • Sangiovese</p>
+                                <p class="text-xs text-textSecondary italic">James Suckling 93 Points • Wine Spectator 93 Points</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Pagos de Aráiz, Blaneo 2022</h5>
+                                    <span class="text-textSecondary text-sm">$60</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">D.O., Navarra, Spain • Garnacha</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Clos de Lôm, Vino de Finca, Isidra 2018</h5>
+                                    <span class="text-textSecondary text-sm">$60</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">D.O., Valencia, Spain • Garnacha, Tempranillo</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Pepe Mendoza Casa Agrícola Giró de Abargues 2020</h5>
+                                    <span class="text-textSecondary text-sm">$45</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Alicante, Spain • Giró</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Viña Mayor, Tinto Roble 2023</h5>
+                                    <span class="text-textSecondary text-sm">$40</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">D.O.C., Ribera del Duero, Spain • Tempranillo</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Bodegas Sonsierra, Crianza 2020</h5>
+                                    <span class="text-textSecondary text-sm">$40</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">D.O.C., Rioja, Spain • Tempranillo</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Bodegas Sonsierra, Viñedo de Altura 2023</h5>
+                                    <span class="text-textSecondary text-sm">$85</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">D.O.C., Rioja, Spain • Tempranillo</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Pico & Vine 2018</h5>
+                                    <span class="text-textSecondary text-sm">$55</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Sonoma County, California • Pinot Noir</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Holloran Vineyard 2021</h5>
+                                    <span class="text-textSecondary text-sm">$85</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Williamette Valley, Oregon • Pinot Noir</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Sineann Philly Hill Vineyard 2021</h5>
+                                    <span class="text-textSecondary text-sm">$85</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Columbia Valley, Washington • Merlot</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">Hill Family Estate, Clarke Vineyards 2018</h5>
+                                    <span class="text-textSecondary text-sm">$105</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Napa Valley, California • Syrah</p>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="flex justify-between items-start mb-1">
+                                    <h5 class="font-semibold text-sm">The Eyrie Vineyards, Trousseau Estate 2019</h5>
+                                    <span class="text-textSecondary text-sm">$70</span>
+                                </div>
+                                <p class="text-xs text-textSecondary">Dundee Hills, Oregon • Trousseau</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spirits & Beer Menu -->
+            <div id="spirits-menu" class="menu-content">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Coffee & Beer -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Coffee</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Latte</span>
+                                <span class="text-textSecondary text-sm">$5</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Cappuccino</span>
+                                <span class="text-textSecondary text-sm">$5</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Cortado</span>
+                                <span class="text-textSecondary text-sm">$4</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Espresso</span>
+                                <span class="text-textSecondary text-sm">$4</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Espresso Doble</span>
+                                <span class="text-textSecondary text-sm">$7</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Tea</span>
+                                <span class="text-textSecondary text-sm">$4</span>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-heading font-light mb-4 mt-8 pb-2 border-b border-gray-300">Beer</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Ocean Lab Blonde</span>
+                                <span class="text-textSecondary text-sm">$6</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Medalla</span>
+                                <span class="text-textSecondary text-sm">$5</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Heineken</span>
+                                <span class="text-textSecondary text-sm">$6</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Heineken Light</span>
+                                <span class="text-textSecondary text-sm">$6</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Heineken Zero</span>
+                                <span class="text-textSecondary text-sm">$6</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Ocean Lab Mexican Lager</span>
+                                <span class="text-textSecondary text-sm">$6</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Ocean Lab IPA</span>
+                                <span class="text-textSecondary text-sm">$6</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Santurce Brewery Pilsner</span>
+                                <span class="text-textSecondary text-sm">$7</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Santurce Brewery Cupey</span>
+                                <span class="text-textSecondary text-sm">$7</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm">Old Harbour Helles</span>
+                                <span class="text-textSecondary text-sm">$6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spirits Column 1 -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Vodka</h3>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between items-center"><span class="text-sm">Absolut</span><span class="text-textSecondary text-sm">$10</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Bravada</span><span class="text-textSecondary text-sm">$11</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Finlandia</span><span class="text-textSecondary text-sm">$8</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Grey Goose</span><span class="text-textSecondary text-sm">$12</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Skyy Vodka</span><span class="text-textSecondary text-sm">$7</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Stolichnaya Vanilla</span><span class="text-textSecondary text-sm">$6</span></div>
+                        </div>
+
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Rum</h3>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between items-center"><span class="text-sm">Abuelo 12 Años</span><span class="text-textSecondary text-sm">$10</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Diplomático Reserva Exclusiva</span><span class="text-textSecondary text-sm">$14</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Don Q Cristal</span><span class="text-textSecondary text-sm">$6</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Punta Cana Club</span><span class="text-textSecondary text-sm">$25</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Ron del Barrilito Dos Estrellas</span><span class="text-textSecondary text-sm">$9</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Ron del Barrilito Tres Estrellas</span><span class="text-textSecondary text-sm">$12</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Zacappa XO</span><span class="text-textSecondary text-sm">$25</span></div>
+                        </div>
+
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Tequila</h3>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex justify-between items-center"><span class="text-sm">Casa Amigos Reposado</span><span class="text-textSecondary text-sm">$16</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Don Julio Blanco</span><span class="text-textSecondary text-sm">$13</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Don Julio Reposado</span><span class="text-textSecondary text-sm">$16</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Don Julio 1942</span><span class="text-textSecondary text-sm">$40</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Libélula Tequila Joven</span><span class="text-textSecondary text-sm">$11</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Milagro Reposado</span><span class="text-textSecondary text-sm">$12</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Tierra Noble Blanco</span><span class="text-textSecondary text-sm">$11</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Tierra Noble Reposado</span><span class="text-textSecondary text-sm">$12</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Tierra Noble Exquisito Extra Añejo</span><span class="text-textSecondary text-sm">$32</span></div>
+                        </div>
+
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Mezcal</h3>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center"><span class="text-sm">Casa Amigos Mezcal</span><span class="text-textSecondary text-sm">$15</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Mezcal López Real</span><span class="text-textSecondary text-sm">$14</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm">Mezcal Verde Momento</span><span class="text-textSecondary text-sm">$11</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Spirits Column 2 -->
+                    <div>
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Whisky</h3>
+                        <div class="space-y-2 mb-6 text-xs">
+                            <div class="flex justify-between items-center"><span>The Balvenie 16 Yr French Oak Single Malt Scotch Triple Cask</span><span class="text-textSecondary whitespace-nowrap ml-2">$38</span></div>
+                            <div class="flex justify-between items-center"><span>Canadian Club 1858</span><span class="text-textSecondary whitespace-nowrap ml-2">$13</span></div>
+                            <div class="flex justify-between items-center"><span>Chivas Regal 12</span><span class="text-textSecondary whitespace-nowrap ml-2">$10</span></div>
+                            <div class="flex justify-between items-center"><span>Dewars White</span><span class="text-textSecondary whitespace-nowrap ml-2">$8</span></div>
+                            <div class="flex justify-between items-center"><span>Dewars 12</span><span class="text-textSecondary whitespace-nowrap ml-2">$11</span></div>
+                            <div class="flex justify-between items-center"><span>Dewars 15</span><span class="text-textSecondary whitespace-nowrap ml-2">$13</span></div>
+                            <div class="flex justify-between items-center"><span>Dewars 18</span><span class="text-textSecondary whitespace-nowrap ml-2">$15</span></div>
+                            <div class="flex justify-between items-center"><span>Fireball Cinnamon</span><span class="text-textSecondary whitespace-nowrap ml-2">$9</span></div>
+                            <div class="flex justify-between items-center"><span>Fukano Japanese, Vault Reserve II</span><span class="text-textSecondary whitespace-nowrap ml-2">$20</span></div>
+                            <div class="flex justify-between items-center"><span>Glenfiddich 12</span><span class="text-textSecondary whitespace-nowrap ml-2">$11</span></div>
+                            <div class="flex justify-between items-center"><span>Glenfiddich IPA Cask</span><span class="text-textSecondary whitespace-nowrap ml-2">$17</span></div>
+                            <div class="flex justify-between items-center"><span>Glenmorangie 12 Yr La Santa Sherry Cask</span><span class="text-textSecondary whitespace-nowrap ml-2">$24</span></div>
+                            <div class="flex justify-between items-center"><span>Glenmorangie 14 Yr The Quinta Rubán</span><span class="text-textSecondary whitespace-nowrap ml-2">$26</span></div>
+                            <div class="flex justify-between items-center"><span>Glenmorangie 18 Yr Extremely Rare</span><span class="text-textSecondary whitespace-nowrap ml-2">$28</span></div>
+                            <div class="flex justify-between items-center"><span>Glenmorangie Signet</span><span class="text-textSecondary whitespace-nowrap ml-2">$35</span></div>
+                            <div class="flex justify-between items-center"><span>Johnnie Walker Black Label</span><span class="text-textSecondary whitespace-nowrap ml-2">$9</span></div>
+                            <div class="flex justify-between items-center"><span>Macallan Edition No. 4</span><span class="text-textSecondary whitespace-nowrap ml-2">$38</span></div>
+                            <div class="flex justify-between items-center"><span>Macallan 12 Yr Sherry Oak</span><span class="text-textSecondary whitespace-nowrap ml-2">$24</span></div>
+                            <div class="flex justify-between items-center"><span>Macallan 18 Yr Double Cask</span><span class="text-textSecondary whitespace-nowrap ml-2">$65</span></div>
+                            <div class="flex justify-between items-center"><span>Talisker 10 Yr Single Malt Scotch Whisky</span><span class="text-textSecondary whitespace-nowrap ml-2">$10</span></div>
+                        </div>
+
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Bourbon</h3>
+                        <div class="space-y-2 mb-6 text-xs">
+                            <div class="flex justify-between items-center"><span>Bulleit Bourbon</span><span class="text-textSecondary whitespace-nowrap ml-2">$9</span></div>
+                            <div class="flex justify-between items-center"><span>Buffalo Trace Bourbon</span><span class="text-textSecondary whitespace-nowrap ml-2">$10</span></div>
+                            <div class="flex justify-between items-center"><span>Jim Beam Black Extra Aged Bourbon</span><span class="text-textSecondary whitespace-nowrap ml-2">$9</span></div>
+                            <div class="flex justify-between items-center"><span>Knob Creek Bourbon</span><span class="text-textSecondary whitespace-nowrap ml-2">$14</span></div>
+                            <div class="flex justify-between items-center"><span>Larceny Bourbon</span><span class="text-textSecondary whitespace-nowrap ml-2">$16</span></div>
+                            <div class="flex justify-between items-center"><span>Uncle Nearest</span><span class="text-textSecondary whitespace-nowrap ml-2">$16</span></div>
+                            <div class="flex justify-between items-center"><span>Woodford Reserve Bourbon</span><span class="text-textSecondary whitespace-nowrap ml-2">$13</span></div>
+                        </div>
+
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Rye</h3>
+                        <div class="space-y-2 mb-6 text-xs">
+                            <div class="flex justify-between items-center"><span>Jim Beam Kentucky Straight Rye</span><span class="text-textSecondary whitespace-nowrap ml-2">$8</span></div>
+                            <div class="flex justify-between items-center"><span>Michter's Small Batch Rye</span><span class="text-textSecondary whitespace-nowrap ml-2">$14</span></div>
+                            <div class="flex justify-between items-center"><span>Whistle Pig 12 Yr Rye</span><span class="text-textSecondary whitespace-nowrap ml-2">$26</span></div>
+                            <div class="flex justify-between items-center"><span>Widow Jane Whiskey, Oak and Apple Aged</span><span class="text-textSecondary whitespace-nowrap ml-2">$15</span></div>
+                        </div>
+
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Gin</h3>
+                        <div class="space-y-2 mb-6 text-xs">
+                            <div class="flex justify-between items-center"><span>Condesa Clásica</span><span class="text-textSecondary whitespace-nowrap ml-2">$12</span></div>
+                            <div class="flex justify-between items-center"><span>Gin MG.</span><span class="text-textSecondary whitespace-nowrap ml-2">$14</span></div>
+                            <div class="flex justify-between items-center"><span>Gunpowder Irish Gin</span><span class="text-textSecondary whitespace-nowrap ml-2">$15</span></div>
+                            <div class="flex justify-between items-center"><span>Fifty Pounds Gin</span><span class="text-textSecondary whitespace-nowrap ml-2">$13</span></div>
+                            <div class="flex justify-between items-center"><span>Hendricks Gin</span><span class="text-textSecondary whitespace-nowrap ml-2">$13</span></div>
+                        </div>
+
+                        <h3 class="text-2xl font-heading font-light mb-4 pb-2 border-b border-gray-300">Cognac</h3>
+                        <div class="space-y-2 text-xs">
+                            <div class="flex justify-between items-center"><span>Honey & Co. Mas Miel Cognac</span><span class="text-textSecondary whitespace-nowrap ml-2">$8</span></div>
+                            <div class="flex justify-between items-center"><span>Remy Martin VSOP Mozart Cognac</span><span class="text-textSecondary whitespace-nowrap ml-2">$13</span></div>
+                            <div class="flex justify-between items-center"><span>Remy Martin 1738 Cognac</span><span class="text-textSecondary whitespace-nowrap ml-2">$18</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Liqueurs & Cordials - Full Width at Bottom -->
+                <div class="mt-12 pt-8 border-t border-gray-300">
+                    <h3 class="text-2xl font-heading font-light mb-6 text-center">Liqueurs & Cordials</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                        <div class="flex justify-between items-center"><span>Amaro Averna</span><span class="text-textSecondary">$9</span></div>
+                        <div class="flex justify-between items-center"><span>Anís Chinchón</span><span class="text-textSecondary">$8</span></div>
+                        <div class="flex justify-between items-center"><span>Ancho Reyes Verde</span><span class="text-textSecondary">$6</span></div>
+                        <div class="flex justify-between items-center"><span>Bonal Aperitif</span><span class="text-textSecondary">$8</span></div>
+                        <div class="flex justify-between items-center"><span>Baileys Irish Cream</span><span class="text-textSecondary">$8</span></div>
+                        <div class="flex justify-between items-center"><span>Borghetti Italian Espresso Liquor</span><span class="text-textSecondary">$10</span></div>
+                        <div class="flex justify-between items-center"><span>Campari</span><span class="text-textSecondary">$8</span></div>
+                        <div class="flex justify-between items-center"><span>Cointreau Orange Liquor</span><span class="text-textSecondary">$9</span></div>
+                        <div class="flex justify-between items-center"><span>Crème de Violette</span><span class="text-textSecondary">$8</span></div>
+                        <div class="flex justify-between items-center"><span>Dissaronno Originale</span><span class="text-textSecondary">$10</span></div>
+                        <div class="flex justify-between items-center"><span>Fernet-Branca</span><span class="text-textSecondary">$9</span></div>
+                        <div class="flex justify-between items-center"><span>Frangelico</span><span class="text-textSecondary">$11</span></div>
+                        <div class="flex justify-between items-center"><span>Grand Marnier Cordon Rouge</span><span class="text-textSecondary">$11</span></div>
+                        <div class="flex justify-between items-center"><span>Kahlua Coffee Flavored Liquor</span><span class="text-textSecondary">$8</span></div>
+                        <div class="flex justify-between items-center"><span>Licor 43</span><span class="text-textSecondary">$9</span></div>
+                        <div class="flex justify-between items-center"><span>Luxardo Maraschino Originale</span><span class="text-textSecondary">$10</span></div>
+                        <div class="flex justify-between items-center"><span>Licor Yolixpa Siete Rayas</span><span class="text-textSecondary">$10</span></div>
+                        <div class="flex justify-between items-center"><span>Midori Melon Liqueur</span><span class="text-textSecondary">$6</span></div>
+                        <div class="flex justify-between items-center"><span>PAMA Pomegranate Flavored Liqueur</span><span class="text-textSecondary">$8</span></div>
+                        <div class="flex justify-between items-center"><span>Tabernero, La Botija Pisco, Puro Quebranta</span><span class="text-textSecondary">$13</span></div>
+                        <div class="flex justify-between items-center"><span>Romana Sambuca</span><span class="text-textSecondary">$9</span></div>
+                        <div class="flex justify-between items-center"><span>Romana Sambuca Black</span><span class="text-textSecondary">$9</span></div>
+                        <div class="flex justify-between items-center"><span>Velvet Falernum</span><span class="text-textSecondary">$6</span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -668,6 +1657,28 @@
                 }, index * 200);
             });
         });
+
+        // Menu Tab Switching
+        function showMenuTab(tabName) {
+            // Hide all menu content
+            document.querySelectorAll('.menu-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            document.querySelectorAll('.menu-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected menu content
+            const selectedMenu = document.getElementById(tabName + '-menu');
+            if (selectedMenu) {
+                selectedMenu.classList.add('active');
+            }
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
     </script>
 </body>
 </html>
